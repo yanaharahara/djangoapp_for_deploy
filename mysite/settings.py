@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '*',
+    'https://agile-bastion-03490.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    
 ]
 
 MIDDLEWARE = [
@@ -133,5 +136,10 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 STATIC_URL = '/static/'
+
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 django_heroku.settings(locals())
